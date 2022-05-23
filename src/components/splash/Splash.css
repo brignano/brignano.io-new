@@ -3,60 +3,73 @@ div {
     display: flex;
 }
 
-@keyframes signature {
-    0% { opacity: 0; }
-    50% { opacity: .5; }
-    80% { opacity: .75; }
-    100% { opacity: 1; }
+#autograph {
+    width: 100vw;
 }
 
-/*.autograph__path {
-!*animation: signature 2s ease-in infinite;*!
-animation-iteration-count: 1;
-animation-fill-mode: forwards;
-!*opacity: 0;*!
+@keyframes signature {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    80% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-.autograph__path:nth-child(1) {
-animation-delay: 0.1s;
-}
+
 .autograph__path:nth-child(2) {
-animation-delay: 0.2s;
+    animation-delay: 0.25s;
 }
+
 .autograph__path:nth-child(3) {
-animation-delay: 0.3s;
+    animation-delay: 0.5s;
 }
+
 .autograph__path:nth-child(4) {
-animation-delay: 0.4s;
+    animation-delay: 0.75s;
 }
+
 .autograph__path:nth-child(5) {
-animation-delay: 0.5s;
-}.autograph__path:nth-child(6) {
-animation-delay: 0.6s;
+    animation-delay: 1.0s;
 }
+
+.autograph__path:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
 .autograph__path:nth-child(7) {
-animation-delay: 0.7s;
+    animation-delay: 1.5s;
 }
+
+.autograph__path__special {
+    animation-delay: 1.75s;
+}
+
 .autograph__path:nth-child(8) {
-animation-delay: 0.8s;
+    animation-delay: 2.0s;
 }
+
 .autograph__path:nth-child(9) {
-animation-delay: 0.9s;
+    animation-delay: 2.25s;
 }
+
 .autograph__path:nth-child(10) {
-animation-delay: 1.0s;
+    animation-delay: 2.50s;
 }
 .autograph__path:nth-child(11) {
-animation-delay: 1.1s;
+    animation-delay: 2.75s;
 }
-.autograph__path:nth-child(12) {
-animation-delay: 1.2s;
-}*/
 
-path {
+#autograph path {
     fill: none;
     stroke: #000;
     stroke-width: 10;
-    stroke-opacity: 0.5;
+    stroke-opacity: 0.30;
 }
 
 @keyframes write {
@@ -70,5 +83,35 @@ path {
 
 .autograph__path {
     stroke-dasharray: 3300;
-    animation: write 2s backwards linear;
+    animation: write .25s backwards linear;
+}
+
+@keyframes write__special {
+    0% {
+        stroke-dashoffset: 5000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.autograph__path__special {
+    stroke-dasharray: 5000;
+    animation: write__special .5s backwards linear;
+    animation-delay: 1.75s;
+}
+
+@keyframes write__dot {
+    0% {
+        stroke-dashoffset: 5000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.autograph__path__dot {
+    stroke-dasharray: 5000;
+    animation: write__dot .25s backwards linear;
+    animation-delay: 3s;
 }

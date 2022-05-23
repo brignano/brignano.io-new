@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import withSplashScreen from './components/Splash';
+import Home from './pages/home/Home';
+import TemporaryDrawer from './components/drawer/Drawer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        mock home page
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <TemporaryDrawer/>
+            <Home/>
+        </div>
+    );
 }
 
-export default withSplashScreen(App);
+// export default withSplashScreen(App);
+export default App;

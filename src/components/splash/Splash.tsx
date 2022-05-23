@@ -25,7 +25,7 @@ function withSplash(WrappedComponent: any) {
                     this.setState({
                         loading: false,
                     });
-                }, 3000)
+                }, 4000)
             } catch (err) {
                 console.log(err);
                 this.setState({
